@@ -1,3 +1,5 @@
-<p>home works!</p>
-<button (click)="onLoginButtonClicked()">Login</button>
-<button (click)="onRegisterButtonClicked()">register</button>
+<p></p>
+<button (click)="onLoginButtonClicked()" *ngIf="!LoggedIn">Login</button>
+<button (click)="onRegisterButtonClicked()" *ngIf="!LoggedIn">register</button>
+
+<H1 *ngIf="LoggedIn">Welcom {{user.name}}</H1>

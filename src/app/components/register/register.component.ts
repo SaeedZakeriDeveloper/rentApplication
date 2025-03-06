@@ -1,5 +1,6 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { IUser } from 'src/app/Interfaces/IUser';
 import { UserService } from 'src/app/services/user.service';
 
@@ -14,7 +15,7 @@ export class RegisterComponent {
   
   
 
-  constructor(private userService: UserService, private router: Renderer2,) { }
+  constructor(private userService: UserService, private router: Router,) { }
 
   registerForm = new FormGroup({
 
@@ -35,7 +36,11 @@ export class RegisterComponent {
     console.log(this.registerForm)
 
     this.userService.add(user!).subscribe((res)=> { 
+      alert("Success")
+      this.router.navigate(["login"])
     })
+
+    
   }
 
 
