@@ -4,88 +4,71 @@
       "id": 1,
       "name": "Saeed",
       "lastName": "Zakeri",
-      "email": "saeed.zakeri1364@gmail.com"
+      "email": "saeed.zakeri1364@gmail.com",
+      "password": "1234"
     },
     {
       "id": 2,
       "name": "Ali",
       "lastName": "Rezaei",
-      "email": "ali.rezaei@example.com"
+      "email": "ali.rezaei@example.com",
+      "password": "5678"
     },
     {
       "id": 3,
       "name": "Neda",
       "lastName": "Farahani",
-      "email": "neda.farahani@example.com"
+      "email": "neda.farahani@example.com",
+      "password": "nedafarahaninedafarahaniexamplecom127"
     },
     {
       "id": 4,
       "name": "Mohammad",
       "lastName": "Hashemi",
-      "email": "mohammad.hashemi@example.com"
+      "email": "mohammad.hashemi@example.com",
+      "password": "mohammadhashemimohammadhashemiexamplecom698"
     },
     {
       "id": 5,
       "name": "Sara",
       "lastName": "Mousavi",
-      "email": "sara.mousavi@example.com"
+      "email": "sara.mousavi@example.com",
+      "password": "saramousavisara.mousaviexamplecom531"
     },
     {
       "id": 6,
       "name": "Reza",
       "lastName": "Karimi",
-      "email": "reza.karimi@example.com"
+      "email": "reza.karimi@example.com",
+      "password": "rezakarimireza.karimiexamplecom901"
     },
     {
       "id": 7,
       "name": "Farid",
       "lastName": "Najafi",
-      "email": "farid.najafi@example.com"
+      "email": "farid.najafi@example.com",
+      "password": "faridnajafifarid.najafiexamplecom680"
     },
     {
       "id": 8,
       "name": "Leila",
       "lastName": "Gholami",
-      "email": "leila.gholami@example.com"
+      "email": "leila.gholami@example.com",
+      "password": "leilagholamileila.gholamiexamplecom247"
     },
     {
       "id": 9,
       "name": "Omid",
       "lastName": "Shahbaz",
-      "email": "omid.shahbaz@example.com"
+      "email": "omid.shahbaz@example.com",
+      "password": "omidshahbazomid.shahbazexamplecom149"
     },
     {
       "id": 10,
       "name": "Zahra",
       "lastName": "Tavakol",
-      "email": "zahra.tavakol@example.com"
-    },
-    {
-      "id": 11,
-      "name": "mamad",
-      "lastName": "karimi",
-      "password": "654654"
-    },
-    {
-      "id": 12,
-      "name": "saeed",
-      "lastName": "zakeri",
-      "password": "sdfsf",
-      "email": "saeed.zakeri1364@gmail.com"
-    },
-    {
-      "id": 13,
-      "name": "aihdfpauhfpauwehfqa",
-      "lastName": "zdfhdgh",
-      "password": "sdfsf",
-      "email": "saeed.zakeri1364@gmail.com"
-    },
-    {
-      "id": 14,
-      "name": "zxcvbzdfsdfgsdfg",
-      "lastName": "zgdfgz",
-      "password": "dfdf",
-      "email": "saeed.zakeri1364@gmail.com"
+      "email": "zahra.tavakol@example.com",
+      "password": "zahratavakolzahra.tavakolexamplecom516"
     }
   ]
 }
