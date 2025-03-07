@@ -6,6 +6,8 @@ import { AdminComponent } from './components/admin/admin.component';
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { AppComponent } from './app.component';
+import { FirstScreenComponent } from './components/first-screen/first-screen.component';
 
 const routes: Routes = [
   { path: "home", component: HomeComponent },
@@ -13,7 +15,9 @@ const routes: Routes = [
   { path: "admin", component: AdminComponent },
   { path: "about", component: AboutComponent },
   { path: "login", component: LoginComponent },
-  { path: "register", component: RegisterComponent }
+  { path: "register", component: RegisterComponent },
+  { path: "", component: FirstScreenComponent },
+  { path: "**", redirectTo: "" }
 ];
 
 @NgModule({
