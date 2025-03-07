@@ -43,5 +43,8 @@ export class RegisterComponent {
     
   }
 
+  onClickWelcomeScreen(){
+    this.router.navigate([''])
+  }
 
 }

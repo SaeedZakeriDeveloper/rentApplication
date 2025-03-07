@@ -33,4 +33,8 @@ export class LoginComponent {
     
   }
 
+  onClickWelcomeScreen(){
+    this.router.navigate([''])
+  }
+
 }
