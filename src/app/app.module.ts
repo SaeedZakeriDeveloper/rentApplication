@@ -13,6 +13,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
 import { FirstScreenComponent } from './components/first-screen/first-screen.component';
+import { HouseComponent } from './components/house/house.component';
+import { BedroomComponent } from './components/bedroom/bedroom.component';
+import { PriceComponent } from './components/price/price.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { FirstScreenComponent } from './components/first-screen/first-screen.com
     AboutComponent,
     LoginComponent,
     RegisterComponent,
-    FirstScreenComponent
+    FirstScreenComponent,
+    HouseComponent,
+    BedroomComponent,
+    PriceComponent
   ],
   imports: [
     BrowserModule,

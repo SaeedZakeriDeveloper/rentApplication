@@ -1,0 +1,17 @@
+.priceList { 
+    font-size: 12px;
+    list-style: none;
+    border: 1px solid gray;
+    width: 150px;
+    height: 32px;
+    border-radius: 7px;
+    font-weight: 700;
+    padding: 3px;
+    margin: 0px;
+    background: #cddee3;
+}
+
+.priceList:hover  , .selected { 
+    background-color:#9bcad8 ;
+    cursor: pointer;
+}

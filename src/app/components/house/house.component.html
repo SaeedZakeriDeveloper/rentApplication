@@ -1,0 +1,16 @@
+<div class="main-container ">
+    <div class="filter-container">
+        <app-bedroom (OnBedroomSelectionChange)="onBedroomChanged($event)"></app-bedroom>
+
+        <app-price (OnPriceSelectionChange)="onPriceChanged($event)"></app-price>
+    </div>
+    <div class="house-list ">
+        <div *ngFor="let house of filteredHouses" class="house-container">
+            <h2>{{house.code}}</h2>
+            <p>{{house.description}}</p>
+            <img [src]="house.imagePath" alt="" width="200px" height="200px">
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,45 @@
+/* Main container - Flexbox for layout */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 56px); 
+    padding: 10px;
+    justify-content: space-between; /* Distributes sections evenly */
+}
+
+/* Left filter container */
+.filter-container {
+    width: 25%;
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Right house list container */
+.house-list {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distributes house items with space around */
+    padding-left: 15px;
+}
+
+/* Individual house container */
+.house-container {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(33.33% - 20px);
+    min-width: 200px;
+    margin-bottom: 20px
+}
+
+/* House images */
+.house-container img {
+    max-width: 100%;
+    height:auto;
+    border-radius: 5px;
+}
+

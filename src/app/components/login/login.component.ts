@@ -28,11 +28,10 @@ export class LoginComponent {
     user.password = this.loginForm.value.password || ""
 
     this.authService.login(user.email, user.password);
-  
-    
-    
   }
 
+
+  
   onClickWelcomeScreen(){
     this.router.navigate([''])
   }

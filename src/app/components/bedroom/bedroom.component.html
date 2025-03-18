@@ -1,0 +1,7 @@
+<!-- ul> 3*li  ul> 3*required bootstrap js -->
+<div>
+    <ul>
+        <li *ngFor="let bedroom of bedrooms" class="bedroomList" (click)="onItemClick(bedroom)" 
+          [ngClass]=" { 'selected' :  bedroom == currentBedroom} " >{{bedroom.title}}</li>
+    </ul>
+</div>

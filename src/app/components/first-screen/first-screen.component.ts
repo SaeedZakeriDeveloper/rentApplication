@@ -11,16 +11,27 @@ import { UserService } from 'src/app/services/user.service';
 export class FirstScreenComponent {
     constructor(private router: Router, private userService: UserService, private authservice: AuthService) { }
   
-  LoggedIn: boolean = false
+  
 
 
   onLoginButtonClicked() {
+    
     this.router.navigate(['login'])
-    this.LoggedIn = true
+    
   }
   onRegisterButtonClicked() {
+ 
     this.router.navigate(['register'])
-    this.LoggedIn = true
+    
   }
 
+  get loggedIn() { 
+    let res =  localStorage.getItem("loggedIn")
+    if (res === "true"){
+      return true
+    }
+    else { 
+      return false
+    }
+  }
 }

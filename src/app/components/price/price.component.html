@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let price of prices" class="priceList" (click)="onItemClick(price)"
+    [ngClass]= "{ 'selected' : price == currentPrice }"
+    >{{price.title}}</li>
+</ul>

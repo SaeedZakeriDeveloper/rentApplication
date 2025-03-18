@@ -1,5 +1,8 @@
-<p></p>
-<button (click)="onLoginButtonClicked()" *ngIf="!LoggedIn">Login</button>
-<button (click)="onRegisterButtonClicked()" *ngIf="!LoggedIn">register</button>
 
-<H1 *ngIf="LoggedIn">Welcom {{user.name}}</H1>
+<H1 *ngIf="loggedIn">Welcom {{currentUser}}</H1>
+
+<router-outlet></router-outlet>
+
+
+<!-- <button (click)="testHouseService()">TEST HOUSE SERVICE</button> -->
+ <button (click)="goToHouseComponents()">Go to house component</button>

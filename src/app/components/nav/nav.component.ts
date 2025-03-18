@@ -8,21 +8,29 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  LoggedIn : boolean = false
+ 
 
 
+  constructor(private authService: AuthService, private router: Router) { }
 
-  constructor(private authService : AuthService , private router  :  Router){}
-
-
-  
   ngOnInit(): void {
-   this.LoggedIn = this.authService.authenticated
+    // this.LoggedIn = this.authService.authenticated
   }
 
-  
-  onButtonLogoutClick(){
-    this.LoggedIn = true
+
+  get loggedIn() { 
+    let res =  localStorage.getItem("loggedIn")
+    if (res === "true"){
+      return true
+    }
+    else { 
+      return false
+    }
+  }
+
+
+  onButtonLogoutClick() {
+    localStorage.clear()
     this.router.navigate(["login"])
   }
 

@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AppComponent } from './app.component';
 import { FirstScreenComponent } from './components/first-screen/first-screen.component';
+import { HouseComponent } from './components/house/house.component';
 
 const routes: Routes = [
   { path: "home", component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: "about", component: AboutComponent },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
+  { path: "house", component: HouseComponent },
   { path: "", component: FirstScreenComponent },
   { path: "**", redirectTo: "" }
 ];
