@@ -4,7 +4,11 @@
 
         <app-price (OnPriceSelectionChange)="onPriceChanged($event)"></app-price>
     </div>
-    <div class="house-list ">
+    <div  >
+        <input type="text" [(ngModel)]="generalFilter" class="inputSearchButton" (input)="generalFilterChange()">
+    </div>
+    <div class="house-list " >
+
         <div *ngFor="let house of filteredHouses" class="house-container">
             <h2>{{house.code}}</h2>
             <p>{{house.description}}</p>

@@ -17,6 +17,7 @@ export class HouseComponent implements OnInit {
   filteredHouses: Ihouses[] = []
   currentBedroom!: IBedroom
   currentPrice!: IPrice
+  generalFilter: string = ""
 
   constructor(private houseService: HouseService) { }
 
@@ -25,7 +26,9 @@ export class HouseComponent implements OnInit {
     this.houseService.getAllhouse().subscribe((res) => {
       this.houses = res
       this.filteredHouses = res
+
     })
+
     this.currentPrice = {
       id: 0,
       title: "All Prices",
@@ -56,35 +59,55 @@ export class HouseComponent implements OnInit {
   filterHouse() {
 
     if (this.currentBedroom.id == 0 && this.currentPrice.id == 0) {
-      this.filteredHouses =  this.houses
+      this.filteredHouses = this.houses
 
     } else if (this.currentBedroom.id != 0 && this.currentPrice.id == 0) {
 
       this.filteredHouses = this.houses.filter(x =>
-        x.bedrooms == this.currentBedroom.value
+        x.bedrooms as unknown as number == this.currentBedroom.value
       )
     }
     else if (this.currentBedroom.id == 0 && this.currentPrice.id != 0) {
       this.filteredHouses == this.houses.filter(x =>
-        x.price >= this.currentPrice.from &&
-        x.price < this.currentPrice.to
+        x.price as unknown as number >= this.currentPrice.from &&
+        x.price as unknown as number < this.currentPrice.to
       )
     }
     else if (this.currentBedroom.id != 0 && this.currentPrice.id != 0) {
       this.filteredHouses = this.houses.filter(x =>
-        x.bedrooms == this.currentBedroom.value &&
-        x.price >= this.currentPrice.from &&
-        x.price < this.currentPrice.to
+        x.bedrooms as unknown as number == this.currentBedroom.value &&
+        x.price as unknown as number >= this.currentPrice.from &&
+        x.price as unknown as number < this.currentPrice.to
 
       )
 
     }
 
 
+
   }
 
-
-
-
+  generalFilterChange() {
+    if (!this.generalFilter.trim()) {
+      this.filterHouse(); 
+      return;
+    }
+  
+  
+    this.filterHouse(); 
+  
+    this.filteredHouses = this.filteredHouses.filter(x => 
+      x.code.includes(this.generalFilter) || 
+      x.address.toLowerCase().includes(this.generalFilter.toLowerCase()) ||
+      x.bathrooms.toString().includes(this.generalFilter) ||
+      x.bedrooms.toString().includes(this.generalFilter) || 
+      x.builtYear.includes(this.generalFilter) || 
+      x.description.toLowerCase().includes(this.generalFilter.toLowerCase()) || 
+      x.owner.toLowerCase().includes(this.generalFilter.toLowerCase()) ||
+      x.price.toString().includes(this.generalFilter) ||
+      x.size.toLowerCase().includes(this.generalFilter.toLowerCase()) 
+    );
+  }
+  
 
 }

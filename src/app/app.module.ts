@@ -11,7 +11,7 @@ import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http'
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FirstScreenComponent } from './components/first-screen/first-screen.component';
 import { HouseComponent } from './components/house/house.component';
 import { BedroomComponent } from './components/bedroom/bedroom.component';
@@ -36,7 +36,8 @@ import { PriceComponent } from './components/price/price.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

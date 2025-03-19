@@ -5,9 +5,9 @@ export interface Ihouses {
     code: string;
     address: string;
     size: string;
-    bedrooms: number;
+    bedrooms: string;
     bathrooms: string;
-    price: number;
+    price: string;
     owner: string;
     builtYear: string;
     description: string;
